@@ -22,3 +22,20 @@ int check_palindrome(listint_t **first, listint_t *last)
 	*first = (*first)->next;
 	return (n);
 }
+
+/**
+ * is_palindrome - checks if linked list is palindrome
+ * @head: pointer to pointer
+ * Return: 1 if palindrome, 0 otherwise
+ */
+int is_palindrome(listint_t **head)
+{
+	listint_t **tmp, *curr;
+
+	tmp = head;
+	curr = *head;
+
+	if (*head == NULL)
+		return (1);
+	return (check_palindrome(tmp, curr));
+}
