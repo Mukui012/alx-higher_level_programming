@@ -5,5 +5,5 @@ def fizzbuzz():
         b = i % 3 == 0
         d = a and b
         output = f"FizzBuzz" if d else f"Buzz" if a \
-                else f"Fizz" if b else f"{i:d}"
+            else f"Fizz" if b else f"{i:d}"
         print(output, end=" ")
