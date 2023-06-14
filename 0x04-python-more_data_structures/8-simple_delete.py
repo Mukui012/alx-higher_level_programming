@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
-def simple_delete(my_dict, key=""):
-    my_dict.pop(key, None)
+def simple_delete(a_dictionary, key=""):
+    a_dictonary.pop(key, None)
     return my_dict
