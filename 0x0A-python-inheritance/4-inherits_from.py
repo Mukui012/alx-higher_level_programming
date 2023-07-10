@@ -8,4 +8,4 @@ that's inherited from the specified class
 def inherits_from(obj, a_class):
     """returns True is obj is instance
     false otherwise"""
-    return issubclass(obj, a_class)
+    return issubclass(type(obj, a_class))
