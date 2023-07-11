@@ -6,4 +6,4 @@ import json
 def load_from_json_file(filename):
     """Function definition"""
     with open(filename, mode='w') as file:
-        json.load(filename)
+        return json.load(file)
