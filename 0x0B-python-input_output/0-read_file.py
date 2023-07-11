@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     """Function definition"""
-    with open("my_file_0.txt", mode='r', encoding='utf-8') as a_file:
+    with open(filename, mode='r', encoding='utf-8') as a_file:
         print(a_file.read())
