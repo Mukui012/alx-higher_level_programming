@@ -6,4 +6,4 @@ and returns the number of caracters written"""
 def write_file(filename="", text=""):
     """Prints string to text file"""
     with open(filename, mode='w', encoding="utf-8") as file:
-        file.write()
+        return file.write(text)
