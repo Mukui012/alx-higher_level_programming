@@ -8,14 +8,14 @@ if __name__ == '__main__':
         q = argv[1]
     else:
         q = ""
-    request = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
+    req = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
     try:
-        request_dict = request.json()
-        id = request_dict.get('id')
-        name = request_dict.get('name')
-        if len(request_dict) == 0 or not id or not name:
+        req_dict = req.json()
+        id = req_dict.get('id')
+        name = req_dict.get('name')
+        if len(req_dict) == 0 or not id or not name:
             print("No result")
         else:
-            print("[{}] {}".format(request_dict.get('id'), request_dict.get('name')))
-    except:
+            print("[{}] {}".format(req_dict.get('id'), req_dict.get('name')))
+    except ValueError:
         print("Not a valid JSON")
