@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+""" Program that fetches a URL """
 import urllib.request
+
 
 if __name__ == '__main__':
     request = urllib.request.Request('https://alx-intranet.hbtn.io/status')
