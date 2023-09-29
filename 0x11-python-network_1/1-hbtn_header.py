@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """ Python script that takes in a URL """
+import sys
+import urllib.request
+
 
 if __name__ == "__main__":
-    import urllib.request as request
-    from sys import arg
-    req = request.Request(arg[1])
-    with request.urlopen(req) as response:
-        print(r.headers.get('X-Request-Id'))
+    url = sys.arg[1]
+
+    request = urllib.request.Request(url)
+    with urllib.request.urlopen(request) as response:
+        print(dict(response.headers).get("X-Request-Id"))
